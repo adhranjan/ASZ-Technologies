@@ -10,7 +10,7 @@ let app = express();
 
 
 /**Find number of availabe seats in a row*******************/
-app.get('/api/allocate/:noOfSeats', function (req, res) {
+app.post('/api/allocate/:noOfSeats', function (req, res) {
     let requiredSeats = parseInt(req.params.noOfSeats);
     if(isNaN(requiredSeats)){
         res.json({
@@ -24,7 +24,7 @@ app.get('/api/allocate/:noOfSeats', function (req, res) {
 });
 
 /**Change the status*******************/
-app.get('/api/seats/:status/:seats', function (req, res) {
+app.post('/api/seats/:status/:seats', function (req, res) {
     let seats = req.params.seats;
     let status = req.params.status;
     if(availableStatus.includes(status)){
