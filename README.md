@@ -9,7 +9,7 @@ node index.js
 localhost:8080
 
 
-Alocate seat
+Find Available seats
 
 localhost:8080/api/allocate/2
 
